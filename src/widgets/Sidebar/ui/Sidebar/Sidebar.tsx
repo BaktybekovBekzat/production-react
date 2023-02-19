@@ -23,7 +23,7 @@ export const Sidebar = ({ className = '' }: SidebarProps) => {
             ])}
         >
             <Button theme={ThemeButton.CLEAR} onClick={onToggle}>
-                {collapsed ? t('Закрыть') : t('Открыть')}
+                {!collapsed ? t('Закрыть') : t('Открыть')}
             </Button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
