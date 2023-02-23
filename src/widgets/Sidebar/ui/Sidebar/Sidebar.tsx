@@ -25,7 +25,7 @@ export const Sidebar = ({ className = '' }: SidebarProps) => {
         >
             <Button
                 data-testid='sidebar-toggle'
-                theme={ThemeButton.CLEAR}
+                theme={ThemeButton.OUTLINE}
                 onClick={onToggle}>
                 {!collapsed ? t('Закрыть') : t('Открыть')}
             </Button>

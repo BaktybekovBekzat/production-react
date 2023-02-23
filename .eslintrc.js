@@ -7,7 +7,8 @@ module.exports = {
         'prettier',
         'plugin:react/recommended',
         'standard-with-typescript',
-        'plugin:i18next/recommended'
+        'plugin:i18next/recommended',
+        'plugin:storybook/recommended'
     ],
     overrides: [],
     parserOptions: {
@@ -25,6 +26,12 @@ module.exports = {
         '@typescript-eslint/no-floating-promises': 'off',
         'no-unused-vars': [1],
         '@typescript-eslint/no-unused-vars': [1],
-        'i18next/no-literal-string': ['error', { markupOnly: true }]
+        'i18next/no-literal-string': [
+            'error',
+            {
+                markupOnly: true
+            }
+        ],
+        '@typescript-eslint/consistent-type-assertions': 'off'
     }
 }
