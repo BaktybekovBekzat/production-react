@@ -2,7 +2,7 @@ import { type BuildPaths } from '../build/types/config'
 import type webpack from 'webpack'
 import path from 'path'
 import buildCssLoader from '../build/loaders/buildCssLoader'
-import { type ModuleOptions, type RuleSetRule } from 'webpack'
+import { type RuleSetRule } from 'webpack'
 import buildSvgLoader from '../build/loaders/buildSvgLoader'
 
 export default ({ config }: { config: webpack.Configuration }) => {
@@ -16,8 +16,10 @@ export default ({ config }: { config: webpack.Configuration }) => {
     config.resolve?.modules?.push(paths.src)
     config.resolve?.extensions?.push('.ts', '.tsx')
 
-    config.module.rules = ((config.module).rules as RuleSetRule[]).map((rule: RuleSetRule) => {
-        if ((rule.test as string).includes('svg')) {
+    // eslint-disable-next-line no-param-reassign
+    config.module.rules = (config.module.rules as RuleSetRule[]).map((rule: RuleSetRule) => {
+        // eslint-disable-next-line @typescript-eslint/prefer-includes
+        if (rule && /svg/.test(rule.test as string)) {
             return { ...rule, exclude: /\.svg$/i }
         }
 
