@@ -21,8 +21,6 @@ jobs:
         with: npm install
       - name: build production project
         with: npm run build:prod
-      - name: build production project
-        with: npm run build:prod
       - name: linting typescript
         with: npm run lint:ts
       - name: linting scss
