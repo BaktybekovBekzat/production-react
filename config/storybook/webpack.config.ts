@@ -17,14 +17,16 @@ export default ({ config }: { config: webpack.Configuration }) => {
     config.resolve?.extensions?.push('.ts', '.tsx')
 
     // eslint-disable-next-line no-param-reassign
-    config.module.rules = (config.module.rules as RuleSetRule[]).map((rule: RuleSetRule) => {
-        // eslint-disable-next-line @typescript-eslint/prefer-includes
-        if (rule && /svg/.test(rule.test as string)) {
-            return { ...rule, exclude: /\.svg$/i }
-        }
+    if (config.module) {
+        config.module.rules = (config.module.rules as RuleSetRule[]).map((rule: RuleSetRule) => {
+            // eslint-disable-next-line @typescript-eslint/prefer-includes
+            if (rule && /svg/.test(rule.test as string)) {
+                return { ...rule, exclude: /\.svg$/i }
+            }
 
-        return rule
-    })
+            return rule
+        })
+    }
 
     config.module?.rules?.push(buildSvgLoader())
 
