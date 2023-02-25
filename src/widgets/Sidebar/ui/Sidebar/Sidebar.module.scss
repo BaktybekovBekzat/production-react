@@ -4,10 +4,20 @@
     background-color: var(--inverted-bg-color);
     position: relative;
     transition: width 0.3s;
-}
 
-.collapsed {
-    width: var(--sidebar-width-collapsed);
+    &Menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 30px;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
 }
 
 .switchers {
@@ -20,4 +30,46 @@
 
 .lang {
     margin-left: 20px;
+}
+
+.icon {
+    fill: var(--inverted-primary-color);
+}
+
+.link {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.collapsedBtn {
+    position: absolute;
+    right: -32px;
+    bottom: 32px;
+}
+
+.collapsed {
+    width: var(--sidebar-width-collapsed);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .SidebarMenu {
+        margin-left: 0;
+    }
+
+    .switchers {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .lang {
+        margin-left: 0;
+    }
+
+    .link {
+        opacity: 0;
+        transition: 0.2s opacity;
+        width: 0;
+    }
 }
