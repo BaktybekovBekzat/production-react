@@ -18,10 +18,10 @@ describe('classNames', () => {
     })
 
     test('with mods changes', () => {
-        let expected = 'some-class class1 class2 hover'
+        let expected = 'some-class class1 class2 hover scrollable'
         const mods = {
             hover: true,
-            scrollable: false
+            scrollable: true
         }
 
         expect(classNames('some-class', mods, ['class1', 'class2'])).toBe(expected)
