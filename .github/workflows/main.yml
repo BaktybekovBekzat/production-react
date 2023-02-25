@@ -18,12 +18,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: install modules
-        with: npm install
+        run: npm install
       - name: build production project
-        with: npm run build:prod
+        run: npm run build:prod
       - name: linting typescript
-        with: npm run lint:ts
+        run: npm run lint:ts
       - name: linting scss
-        with: npm run lint:scss
+        run: npm run lint:scss
       - name: unit testing
-        with: npm run test:unit
+        run: npm run test:unit
