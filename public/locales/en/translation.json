@@ -1,13 +1,14 @@
 {
-	"Изменить язык": "Change language",
-	"Перевод": "Translate",
-	"Язык": "English",
-	"new translate": "new translate",
-	"Открыть": "Open",
-	"Закрыть": "Close",
-    "Страница не найдена": "Page not found",
-    "Произошла непредвиденнная ошибка": "Something went wrong",
-    "Обновить страницу": "Reload page",
-    "Сбросить ошибку": "Throw error",
-    "Короткий язык": "En"
+  "Изменить язык": "Change language",
+  "Перевод": "Translate",
+  "Язык": "English",
+  "new translate": "new translate",
+  "Открыть": "Open",
+  "Закрыть": "Close",
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденнная ошибка": "Something went wrong",
+  "Обновить страницу": "Reload page",
+  "Сбросить ошибку": "Throw error",
+  "Короткий язык": "En",
+  "Войти": "Login"
 }
