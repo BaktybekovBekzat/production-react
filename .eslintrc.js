@@ -16,7 +16,11 @@ module.exports = {
         sourceType: 'module',
         project: './tsconfig.json'
     },
-    plugins: ['react', 'eslint-plugin-i18next'],
+    plugins: [
+        'react',
+        'eslint-plugin-i18next',
+        'react-hooks'
+    ],
     rules: {
         indent: [2, 4],
         '@typescript-eslint/indent': [2, 4],
@@ -32,6 +36,8 @@ module.exports = {
                 markupOnly: true
             }
         ],
-        '@typescript-eslint/consistent-type-assertions': 'off'
+        '@typescript-eslint/consistent-type-assertions': 'off',
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error'
     }
 }
